@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <meta property="og:title" content="Vijay Ramdev (BUG BUSTERS)" />
+  <meta property="og:description" content="Portfolio Website of Vijay Ramdev" />
+  <meta property="og:image" content="images/your-image.jpg" />
+  <meta property="og:url" content="https://your-portfolio-link.com" />
+  <meta property="og:type" content="website" />
+  
+  <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
+
+  <title>Vijay Ramdev (BUG BUSTERS)</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/cb31bfb0c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo" alt="Logo" />
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="header-text">
+        <p>Full Stack Developer | AI & ML Enthusiast</p>
+        <h1>Hi, I'm <span>Vijay Ramdev</span><br />from India</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="favicon.png" alt="Vijay Ramdev Image" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p style="text-align: justify; padding-top: 20px;">
+            I'm a passionate content creator on YouTube, sharing my expertise in coding and software development.
+            As a professional full-stack developer and AI & ML enthusiast, I offer real-world insights and tutorials
+            that make complex coding concepts easy and fun to understand. I'm committed to continuous learning and
+            building a community of tech learners. Join me as we explore and grow in the dynamic field of software
+            development.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>LANGUAGES</span><br />JavaScript, Java, C#, Python, TypeScript, PHP, SQL</li>
+              <li><span>FRONTEND TECHNOLOGIES</span><br />AngularJS, ReactJS, Redux, Bootstrap, HTML, CSS</li>
+              <li><span>BACKEND TECHNOLOGIES</span><br />NodeJS, ExpressJS, Java, REST APIs</li>
+              <li><span>DATABASES</span><br />MySQL, MongoDB, MS SQL Server</li>
+              <li><span>DEVELOPER TOOLS</span><br />Git, GitHub, GitLab, Postman</li>
+              <li><span>AI & ML TOOLS</span><br />tkinter, NumPy, Pandas, Scikit-learn, TensorFlow (Basics), OpenAI API</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Snapfolio</span><br />Software Development Engineer Intern (March 2025 - end on 2025 5 may)</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>B.Tech</span><br />JIET University, CSE - AI & ML (2024 - Present)</li>
+              <li><span>Senior Secondary</span><br />Swar Vandana Academy, Jodhpur (RBSE), 2022–2023</li>
+              <li><span>Secondary</span><br />Hari Om Bal Niketan Senior Secondary School, Jodhpur (RBSE), 2020–2021</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let tablinks = document.getElementsByClassName("tab-links");
+    let tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    function closemenu() {
+      document.getElementById("sidemenu").style.right = "-200px";
+    }
+
+    function openmenu() {
+      document.getElementById("sidemenu").style.right = "0";
+    }
+  </script>
+</body>
+
+</html>
